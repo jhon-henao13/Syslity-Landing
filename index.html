@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syslity - Mantenimiento y Reparación de Equipos de Cómputo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Loader Animado Interactivo Mejorado -->
+  <div id="loader" aria-label="Cargando Syslity">
+    <div class="loader-logo-container">
+      <img src="images/logo.jpeg" alt="Logo Syslity" class="loader-logo">
+      <canvas class="loader-particles"></canvas>
+      <div class="loader-glow"></div>
+      <div class="loader-spinner"></div>
+    </div>
+    <div class="loader-text">Cargando Syslity...</div>
+  </div>
+
+  <!-- Navbar Moderno Mejorado -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo-link"><img src="images/logo.jpeg" alt="Syslity Logo" class="logo-img"><span class="logo-text">Syslity</span></a>
+      <nav class="nav-links desktop-nav">
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#tecnicos" class="nav-link">Técnicos</a>
+        <a href="#compra-venta" class="nav-link">Compra/Venta</a>
+        <a href="#reclutamiento" class="nav-link">Reclutamiento</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#servicios" class="mobile-nav-link">Servicios</a>
+      <a href="#tecnicos" class="mobile-nav-link">Técnicos</a>
+      <a href="#compra-venta" class="mobile-nav-link">Compra/Venta</a>
+      <a href="#reclutamiento" class="mobile-nav-link">Reclutamiento</a>
+      <a href="#contacto" class="mobile-nav-link">Contacto</a>
+      <button class="theme-toggle-mobile" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <!-- Hero Section con Cards Flotantes y animaciones -->
+  <section class="hero">
+    <div class="hero-background">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-power-off badge-icon"></i>
+          <span class="badge-text">Soluciones en Tecnología</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Soluciones inteligentes para tus</span>
+          <span class="title-line highlight"> Equipos de Cómputo</span>
+        </h1>
+        <p class="hero-subtitle">En Syslity cuidamos, reparamos y actualizamos tus dispositivos con tecnología, experiencia y total confianza.</p>
+        <div class="hero-buttons">
+          <a href="#servicios"><button class="animated-button btn-primary"><span class="text">Ver Servicios</span></button></a>
+          <a href="#reclutamiento"><button class="animated-button btn-secondary"><span>¿Eres Técnico?</span></button></a>
+        </div>
+      </div>
+      <div class="hero-image" id="hero-image">
+        <div class="image-container">
+          <img src="images/logo.jpeg" alt="Syslity Logo" class="hero-img">
+          <div class="image-overlay"></div>
+          <!-- Cards flotantes animadas -->
+          <div class="floating-card card-1">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="card-content">
+              <span class="card-title">Protección Total</span>
+              <span class="card-subtitle">Tus equipos siempre seguros</span>
+            </div>
+          </div>
+          <div class="floating-card card-2">
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <div class="card-content">
+              <span class="card-title">Soporte Rápido</span>
+              <span class="card-subtitle">Respuesta inmediata</span>
+            </div>
+          </div>
+          <div class="floating-card card-3">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-content">
+              <span class="card-title">Expertos Certificados</span>
+              <span class="card-subtitle">Soluciones profesionales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="features">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-badge">Nuestros Servicios</span>
+      <h2 class="section-title">¿Qué Ofrecemos?</h2>
+      <p class="section-subtitle">Soluciones integrales para el mantenimiento y reparación de tus equipos de cómputo.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon-wrapper"><i class="fas fa-shield-alt feature-icon"></i></div>
+        <div class="feature-content">
+          <h3>Mantenimiento Preventivo</h3>
+          <p>Limpieza, optimización y revisión periódica para prolongar la vida útil de tus equipos.</p>
+        </div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon-wrapper"><i class="fas fa-tools feature-icon"></i></div>
+        <div class="feature-content">
+          <h3>Mantenimiento Correctivo</h3>
+          <p>Diagnóstico y reparación de fallas de hardware y software. ¡Recupera tu equipo rápidamente!</p>
+        </div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon-wrapper"><i class="fas fa-laptop feature-icon"></i></div>
+        <div class="feature-content">
+          <h3>Compra y Venta de Computadores</h3>
+          <p>Equipos nuevos y reacondicionados, con garantía y asesoría personalizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Técnicos -->
+  <section id="tecnicos" class="tecnicos">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-badge">Nuestro Equipo</span>
+      <h2 class="section-title">Técnicos Certificados</h2>
+      <p class="section-subtitle">Conoce a nuestros expertos, revisa sus calificaciones y contacta directamente.</p>
+    </div>
+    <div class="tecnicos-grid">
+      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="tecnico-avatar"><i class="fas fa-user-cog"></i></div>
+        <div class="tecnico-info">
+          <h3>Juan Pérez</h3>
+          <div class="tecnico-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <span>4.5</span>
+          </div>
+          <ul class="tecnico-skills">
+            <li>Hardware</li>
+            <li>Software</li>
+            <li>Redes</li>
+          </ul>
+          <a href="mailto:juanperez@syslity.com" class="tecnico-contacto"><i class="fas fa-envelope"></i> Contactar</a>
+        </div>
+      </div>
+      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="tecnico-avatar"><i class="fas fa-user-cog"></i></div>
+        <div class="tecnico-info">
+          <h3>María Gómez</h3>
+          <div class="tecnico-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>5.0</span>
+          </div>
+          <ul class="tecnico-skills">
+            <li>Soporte Técnico</li>
+            <li>Actualizaciones</li>
+            <li>Seguridad</li>
+          </ul>
+          <a href="mailto:mariagomez@syslity.com" class="tecnico-contacto"><i class="fas fa-envelope"></i> Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compra/Venta -->
+  <section id="compra-venta" class="compra-venta">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-badge">Equipos Disponibles</span>
+      <h2 class="section-title">Compra y Venta</h2>
+      <p class="section-subtitle">Explora nuestra selección de computadores nuevos y usados.</p>
+    </div>
+    <div class="compra-venta-grid">
+      <div class="producto-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="producto-img"><i class="fas fa-laptop"></i></div>
+        <div class="producto-info">
+          <h3>Lenovo ThinkPad T14</h3>
+          <p>Core i5, 16GB RAM, 512GB SSD</p>
+          <span class="producto-precio">$850</span>
+          <a href="#contacto" class="producto-contacto">Solicitar Información</a>
+        </div>
+      </div>
+      <div class="producto-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="producto-img"><i class="fas fa-laptop"></i></div>
+        <div class="producto-info">
+          <h3>Dell Inspiron 15</h3>
+          <p>Core i7, 8GB RAM, 256GB SSD</p>
+          <span class="producto-precio">$700</span>
+          <a href="#contacto" class="producto-contacto">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reclutamiento Mejorado -->
+  <section id="reclutamiento" class="reclutamiento reclutamiento-impresionante">
+    <div class="reclutamiento-bg-anim"></div>
+    <div class="reclutamiento-content">
+      <div class="reclutamiento-logo-float">
+        <img src="images/logo.jpeg" alt="Syslity Logo" class="reclutamiento-logo-img">
+        <div class="reclutamiento-card-float card-f1">
+          <i class="fas fa-bolt"></i>
+          <span>Comisión Alta</span>
+        </div>
+        <div class="reclutamiento-card-float card-f2">
+          <i class="fas fa-users"></i>
+          <span>Comunidad</span>
+        </div>
+        <div class="reclutamiento-card-float card-f3">
+          <i class="fas fa-certificate"></i>
+          <span>Certificación</span>
+        </div>
+      </div>
+      <div class="reclutamiento-textos">
+        <h2 class="reclutamiento-titulo">¿Eres Técnico en Computadores?</h2>
+        <p class="reclutamiento-subtitulo">
+          Únete a <span class="syslity-gradient">Syslity</span> y recibe comisiones por cada servicio realizado.<br>
+          ¡Forma parte de una red profesional, crece y gana más!
+        </p>
+        <a href="https://wa.me/573000000000?text=Hola%20quiero%20unirme%20como%20t%C3%A9cnico%20a%20Syslity" target="_blank" class="btn-whatsapp-join">
+          <i class="fab fa-whatsapp"></i> Postúlate por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <div class="contact-container">
+      <div class="contact-content" data-aos="fade-right">
+        <div class="section-header">
+          <span class="section-badge">Contacto</span>
+          <h2 class="section-title">¿Tienes dudas o necesitas ayuda?</h2>
+          <p class="section-subtitle">Escríbenos y te responderemos lo antes posible.</p>
+        </div>
+        <div class="contact-info">
+          <div class="info-card"><i class="fas fa-envelope info-icon"></i><span>info@syslity.com</span></div>
+          <div class="info-card"><i class="fas fa-phone info-icon"></i><span>+57 300 000 0000</span></div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper" data-aos="fade-left">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder=" " required>
+            <label class="form-label">Nombre</label>
+            <span class="input-icon"><i class="fas fa-user"></i></span>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-input" placeholder=" " required>
+            <label class="form-label">Correo</label>
+            <span class="input-icon"><i class="fas fa-envelope"></i></span>
+          </div>
+          <div class="form-group">
+            <textarea class="form-input" placeholder=" " required></textarea>
+            <label class="form-label">Mensaje</label>
+            <span class="input-icon"><i class="fas fa-comment"></i></span>
+          </div>
+          <button type="submit" class="submit-btn"><span>Enviar</span> <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Moderno -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="images/logo.jpeg" alt="Syslity Logo" class="footer-logo-img">
+          <span class="footer-logo-text">Syslity</span>
+        </div>
+        <div class="footer-description">Mantenimiento, reparación y tecnología a tu alcance.</div>
+        <div class="footer-social">
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Suscríbete a nuestro Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu email" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-info"><p>&copy; 2025 Syslity. Todos los derechos reservados.</p></div>
+    </div>
+  </footer>
+  <div class="scroll-top"><i class="fas fa-arrow-up"></i></div>
+
+  <script>
+    // Animación de transición entre secciones al hacer scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section');
+      const revealSections = () => {
+        const trigger = window.innerHeight * 0.92;
+        sections.forEach(section => {
+          const top = section.getBoundingClientRect().top;
+          if (top < trigger) section.classList.add('visible');
+        });
+      };
+      window.addEventListener('scroll', revealSections);
+      revealSections();
+    });
+  </script>
+</body>
+</html>
