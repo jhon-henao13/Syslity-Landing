@@ -11,6 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
   heroTypewriter();
   revealOnScroll();
   animateRatingsAndSkills();
+  enable3DHover();
+  enableAnimatedIcons();
+  enableAnimatedButtons();
 });
 window.addEventListener('load', hideLoader);
 
@@ -261,5 +264,72 @@ function animateRatingsAndSkills() {
   });
   document.querySelectorAll('.tecnico-skills li').forEach((skill, idx) => {
     skill.style.animationDelay = (idx * 0.18) + 's';
+  });
+}
+
+// Efecto 3D interactivo en logo y cards reclutamiento
+function enable3DHover() {
+  // Logo 3D
+  document.querySelectorAll('.logo-3d').forEach(logo => {
+    logo.addEventListener('mousemove', e => {
+      const rect = logo.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateY = ((x - centerX) / centerX) * 18;
+      const rotateX = ((centerY - y) / centerY) * 12;
+      logo.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.08)`;
+      logo.classList.add('active');
+    });
+    logo.addEventListener('mouseleave', () => {
+      logo.style.transform = '';
+      logo.classList.remove('active');
+    });
+  });
+  // Reclutamiento cards 3D
+  document.querySelectorAll('.card-3d').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateY = ((x - centerX) / centerX) * 12;
+      const rotateX = ((centerY - y) / centerY) * 8;
+      card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.06)`;
+      card.classList.add('active');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.classList.remove('active');
+    });
+  });
+}
+
+// Animación de iconos (rebote y pulso)
+function enableAnimatedIcons() {
+  document.querySelectorAll('.animated-icon').forEach(icon => {
+    icon.addEventListener('mouseenter', () => {
+      icon.classList.add('active');
+    });
+    icon.addEventListener('mouseleave', () => {
+      icon.classList.remove('active');
+    });
+  });
+}
+
+// Animación de botones (efecto rebote)
+function enableAnimatedButtons() {
+  document.querySelectorAll('.animated-btn').forEach(btn => {
+    btn.addEventListener('mousedown', () => {
+      btn.style.transform += ' scale(0.95)';
+    });
+    btn.addEventListener('mouseup', () => {
+      btn.style.transform = btn.style.transform.replace(' scale(0.95)', '');
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = btn.style.transform.replace(' scale(0.95)', '');
+    });
   });
 }

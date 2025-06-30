@@ -484,6 +484,7 @@ body {
 .section-header {
   text-align: center;
   margin-bottom: 2.5rem;
+  margin-top: 2rem;
 }
 .section-badge {
   display: inline-block;
@@ -918,12 +919,17 @@ body {
 }
 .contact-content {
   flex: 1 1 340px;
-  min-width: 300px;
+  min-width: 600px;
 }
 .contact-info {
-  margin-top: 1.2rem;
-  color: var(--primary);
+  margin-top: 2.2rem;
+  color: var(--white);
   font-size: 1.1rem;
+  padding: 20px;
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-form-wrapper {
   flex: 1 1 340px;
@@ -946,7 +952,7 @@ body {
 }
 .form-label {
   position: absolute;
-  top: 1.1rem; left: 1.2rem;
+  top: 1.1rem; left: 2.6rem;
   color: #888;
   font-size: 1rem;
   pointer-events: none;
@@ -956,7 +962,7 @@ body {
   border-radius: 0.5rem;
 }
 .form-input {
-  width: 100%;
+  width: auto;
   padding: 1.1rem 1.2rem 1.1rem 2.7rem;
   border-radius: 1.2rem;
   border: 1.5px solid #ddd;
@@ -1107,7 +1113,7 @@ body {
   color: var(--secondary);
 }
 .footer-newsletter h4 {
-  color: var(--primary);
+  color: var(--white);
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
@@ -1157,6 +1163,99 @@ body {
   border-radius: 50px;
 }
 
+
+/* Efectos 3D y animaciones en cards y logo */
+.logo-3d {
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1), box-shadow 0.5s;
+  will-change: transform, box-shadow;
+}
+.logo-3d:hover, .logo-3d.active {
+  transform: rotateY(18deg) rotateX(12deg) scale(1.08);
+  box-shadow: 0 16px 64px 0 #00b4d8cc, 0 0 0 16px #fff3;
+}
+.card-3d {
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1), box-shadow 0.5s;
+  will-change: transform, box-shadow;
+}
+.card-3d:hover, .card-3d.active {
+  transform: rotateY(-12deg) rotateX(8deg) scale(1.06);
+  box-shadow: 0 12px 48px 0 #48cae4cc, 0 0 0 8px #00b4d84a;
+}
+
+/* Iconos animados y microinteracciones */
+.animated-icon {
+  transition: color 0.3s, transform 0.4s cubic-bezier(.77,0,.18,1), filter 0.3s;
+  will-change: transform, color, filter;
+}
+.animated-icon:hover, .animated-icon.active {
+  color: var(--secondary);
+  transform: scale(1.18) rotateZ(-8deg);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* Botones animados */
+.animated-btn {
+  transition: background 0.3s, color 0.3s, transform 0.18s, box-shadow 0.3s;
+  will-change: transform, box-shadow;
+}
+.animated-btn:hover, .animated-btn:focus {
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  color: var(--white);
+  transform: scale(1.08) translateY(-2px) rotateZ(-2deg);
+  box-shadow: 0 8px 32px 0 #00b4d84a;
+}
+
+/* Glassmorphism efecto */
+.glassmorph {
+  
+  box-shadow: 0 8px 32px 0 #00b4d81a;
+  backdrop-filter: blur(16px);
+  
+}
+
+/* Contacto animaciones extra */
+.info-card {
+  animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1) both;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.info-card:hover {
+  background: rgba(0,180,216,0.13);
+  box-shadow: 0 4px 24px 0 #00b4d84a;
+}
+.input-icon.animated-icon {
+  transition: color 0.3s, transform 0.4s cubic-bezier(.77,0,.18,1);
+}
+.input-icon.animated-icon:focus-within, .input-icon.animated-icon.active {
+  color: var(--secondary);
+  transform: scale(1.18);
+}
+
+/* Reclutamiento cards animadas */
+.reclutamiento-card-float.card-3d {
+  cursor: pointer;
+}
+.reclutamiento-card-float.card-3d:hover {
+  background: rgba(0,180,216,0.13);
+  box-shadow: 0 8px 32px 0 #48cae4cc, 0 0 0 8px #00b4d84a;
+  transform: scale(1.08) rotateY(-8deg) rotateX(6deg);
+}
+.reclutamiento-card-float .animated-icon {
+  animation: iconPulse 1.5s infinite alternate;
+}
+@keyframes iconPulse {
+  0% { filter: drop-shadow(0 0 0px var(--accent)); }
+  100% { filter: drop-shadow(0 0 12px var(--secondary)); }
+}
+
+/* Footer social iconos animados */
+.footer-social .animated-icon {
+  transition: color 0.3s, transform 0.4s cubic-bezier(.77,0,.18,1), filter 0.3s;
+}
+.footer-social .animated-icon:hover {
+  color: var(--secondary);
+  transform: scale(1.18) rotateZ(-8deg);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
 
 /* Animaciones de aparición */
 .feature-card.animate, .tecnico-card.animate, .producto-card.animate, .contact-form-wrapper.animate {
