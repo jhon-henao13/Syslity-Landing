@@ -326,6 +326,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 .hero-badge {
   display: flex;
@@ -1484,16 +1485,14 @@ body {
     align-items: center;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   .nav-links {
     display: none;
   }
   .mobile-menu-btn {
     display: flex;
   }
-  .mobile-menu {
-    display: flex;
-  }
+  
   .hero-container {
     flex-direction: column;
     gap: 2.5rem;
@@ -1503,7 +1502,31 @@ body {
     width: 220px; height: 220px;
   }
   .hero-img {
-    width: 120px; height: 120px;
+    width: 300px; height: 300px;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+    padding: 0 5rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .floating-card.card-1 {
+    top: -40px;
+    left: -130px;
+  }
+
+  .floating-card.card-2 {
+    bottom: -65px;
+    right: 100px;
+  }
+
+  .floating-card.card-3 {
+    top: 25%;
+    left: 75%;
   }
 }
 @media (max-width: 700px) {
@@ -1525,7 +1548,36 @@ body {
     gap: 2.2rem;
     align-items: center;
   }
+
+  .contact-content {
+    min-width: 50px;
+  }
+
+  .tecnico-contacto {
+    display: inline;
+  }
 }
+
+
+@media (max-width: 595px) {
+  .hero-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .floating-card, .card-icon {
+    font-size: 1.5rem !important;
+  }
+  
+
+
+  .floating-card.card-1 {
+    top: -10px;
+    left: -100px;
+  }
+}
+
+
 @media (max-width: 500px) {
   html {
     font-size: 15px;
