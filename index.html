@@ -24,27 +24,29 @@
     </div>
     <div class="loader-text">Cargando Syslity...</div>
   </div>
+  <!-- Overlay global para mobile-menu y evitar fondo blanco -->
+  <div class="global-overlay"></div>
 
   <!-- Navbar Moderno Mejorado -->
   <header class="navbar" id="navbar">
     <div class="navbar-container">
-      <a href="#" class="logo-link"><img src="images/logo.jpeg" alt="Syslity Logo" class="logo-img"><span class="logo-text">Syslity</span></a>
+      <a href="#" class="logo-link"><img src="images/logo.jpeg" alt="Syslity Logo" class="logo-img logo-3d"><span class="logo-text">Syslity</span></a>
       <nav class="nav-links desktop-nav">
-        <a href="#servicios" class="nav-link">
-          <i class="fas fa-tools nav-icon"></i> Servicios
-        </a>
-        <a href="#tecnicos" class="nav-link"><i class="fas fa-user-cog nav-icon"></i>
-           Técnicos
-          
-        </a>
+        <a href="#servicios" class="nav-link"><i class="fas fa-tools nav-icon"></i> Servicios</a>
+        <a href="#tecnicos" class="nav-link"><i class="fas fa-user-cog nav-icon"></i> Técnicos</a>
         <a href="#compra-venta" class="nav-link"><i class="fas fa-laptop nav-icon"></i> Compra/Venta</a>
         <a href="#reclutamiento" class="nav-link"><i class="fas fa-briefcase nav-icon"></i> Reclutamiento</a>
         <a href="#contacto" class="nav-link"><i class="fas fa-envelope nav-icon"></i> Contacto</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn"><span></span><span></span><span></span></button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    <nav class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <button class="close-mobile-menu" id="closeMobileMenu" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
       <a href="#servicios" class="mobile-nav-link">Servicios</a>
       <a href="#tecnicos" class="mobile-nav-link">Técnicos</a>
       <a href="#compra-venta" class="mobile-nav-link">Compra/Venta</a>

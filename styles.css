@@ -1794,3 +1794,14 @@ body {
     opacity: 1;
   }
 }
+
+
+
+.close-mobile-menu {
+  background: #00b4d8;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 900;
+}

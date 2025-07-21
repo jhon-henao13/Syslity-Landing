@@ -62,25 +62,35 @@ function initializeAnimations() {
   }
 
   // Mobile menu
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileOverlay = document.getElementById('mobileMenuOverlay');
+  const globalOverlay = document.querySelector('.global-overlay');
   function openMobileMenu() {
     mobileMenu.classList.add('active');
     mobileOverlay.classList.add('active');
+    globalOverlay.classList.add('active');
+    mobileMenuBtn.classList.add('active');
     body.style.overflow = 'hidden';
+    body.style.width = '100vw';
   }
   function closeMobileMenu() {
     mobileMenu.classList.remove('active');
     mobileOverlay.classList.remove('active');
+    globalOverlay.classList.remove('active');
+    mobileMenuBtn.classList.remove('active');
     body.style.overflow = '';
+    body.style.width = '';
   }
-  if (mobileMenuBtn && mobileMenu && mobileOverlay) {
+  if (mobileMenuBtn && mobileMenu && mobileOverlay && globalOverlay) {
     mobileMenuBtn.addEventListener('click', openMobileMenu);
     mobileOverlay.addEventListener('click', closeMobileMenu);
+    globalOverlay.addEventListener('click', closeMobileMenu);
     mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', closeMobileMenu);
     });
+    const closeBtn = document.getElementById('closeMobileMenu');
+    if (closeBtn) closeBtn.addEventListener('click', closeMobileMenu);
   }
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) closeMobileMenu();
