@@ -326,7 +326,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
 .hero-badge {
   display: flex;
@@ -1493,10 +1493,33 @@ body {
     display: flex;
   }
   
+  .hero-title {
+    font-size: 3.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .hero-buttons {
+    gap: 5rem;
+  }
+
+  .animated-button {
+    font-size: 1.8rem;
+  }
+
+  .hero-badge {
+    justify-content: center;
+  }
+
   .hero-container {
     flex-direction: column;
     gap: 2.5rem;
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 5rem 1rem 6rem 1rem;
   }
   .image-container {
     width: 220px; height: 220px;
@@ -1511,6 +1534,9 @@ body {
   }
 
   .hero-content {
+    text-align: center;
+    padding-bottom: 2rem;
+    align-items: center;
     text-align: center;
   }
 
@@ -1527,6 +1553,15 @@ body {
   .floating-card.card-3 {
     top: 25%;
     left: 75%;
+  }
+
+  .navbar-container {
+    padding: 1.4rem 2rem;
+  }
+
+  .mobile-menu-btn span {
+    width: 50px;
+    height: 8px;
   }
 }
 @media (max-width: 700px) {

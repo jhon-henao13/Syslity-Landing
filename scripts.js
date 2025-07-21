@@ -5,7 +5,7 @@ const body = document.body;
 
 // Inicialización principal
 window.addEventListener('DOMContentLoaded', () => {
-  hideLoader();
+  
   createLoaderParticles();
   initializeAnimations();
   heroTypewriter();
@@ -15,7 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
   enableAnimatedIcons();
   enableAnimatedButtons();
 });
-window.addEventListener('load', hideLoader);
+window.addEventListener('load', () => {
+  setTimeout(hideLoader, 0); // Espera 1 segundo extra
+});
+
 
 function initializeAnimations() {
   // Smooth scroll con offset para navbar sticky
