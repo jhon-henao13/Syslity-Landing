@@ -1705,6 +1705,20 @@ body {
   .hero-buttons {
     gap: 3rem;
   }
+
+
+  .reclutamiento-textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reclutamiento-card-float {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
 }
 
 
@@ -1741,6 +1755,21 @@ body {
     left: -100px;
   }
 
+  .footer-newsletter {
+    max-width: 80%;
+  }
+
+  .newsletter-form input {
+    width: 10px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.7rem;
+  }
   
 }
 
@@ -1748,7 +1777,15 @@ body {
   .floating-card {
     display: none;
   }
-  
+
+  .hero-subtitle {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
 }
 
 
