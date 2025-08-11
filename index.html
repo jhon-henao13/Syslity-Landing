@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
   <link href="https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- tsParticles (Partículas de fondo) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
   <script src="scripts.js" defer></script>
 </head>
 <body>
@@ -58,13 +70,14 @@
 
   <!-- Hero Section con Cards Flotantes y animaciones -->
   <section class="hero">
+    
     <div class="hero-background">
       <div class="hero-shape shape-1"></div>
       <div class="hero-shape shape-2"></div>
       <div class="hero-shape shape-3"></div>
     </div>
     <div class="hero-container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="slide-in-left">
         <div class="hero-badge">
           <i class="fas fa-power-off badge-icon"></i>
           <span class="badge-text">Soluciones en Tecnología</span>
@@ -79,7 +92,7 @@
           <a href="#reclutamiento"><button class="animated-button btn-secondary"><span>¿Eres Técnico?</span></button></a>
         </div>
       </div>
-      <div class="hero-image" id="hero-image">
+      <div class="hero-image" id="hero-image" data-aos="slide-in-right">
         <div class="image-container">
           <img src="images/logo.jpeg" alt="Syslity Logo" class="hero-img">
           <div class="image-overlay"></div>
@@ -142,120 +155,124 @@
     </div>
   </section>
 
-  <!-- Técnicos -->
-  <section id="tecnicos" class="tecnicos">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-badge">Nuestro Equipo</span>
-      <h2 class="section-title">Técnicos Certificados</h2>
-      <p class="section-subtitle">Conoce a nuestros expertos, revisa sus calificaciones y contacta directamente.</p>
-    </div>
-    <div class="tecnicos-grid">
-      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 1" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Ladino</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.5</span>
+
+<!-- Técnicos -->
+<section id="tecnicos" class="tecnicos">
+  <div class="section-header" data-aos="fade-up">
+    <span class="section-badge">Nuestro Equipo</span>
+    <h2 class="section-title">Técnicos Certificados</h2>
+    <p class="section-subtitle">Conoce a nuestros expertos, revisa sus calificaciones y contacta directamente.</p>
+  </div>
+
+  <div class="swiper tecnicos-slider">
+    <div class="swiper-wrapper">
+
+      <!-- Técnico Ladino -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/ladino.jpeg" alt="Ladino">
+          <div class="tecnico-info-overlay">
+            <h3>Ladino</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.5</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573015688088?text=👋%20Hola%2C%20Ladino!" target="_blank">Contactar</a>
           </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573015688088?text=👋%20Hola%2C%20Ladino!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
-        </div>
-      </div>
-      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 2" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Lisen</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.0</span>
-          </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573027593737?text=👋%20Hola%2C%20Lisen!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
         </div>
       </div>
 
-      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 2" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Maicol</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.0</span>
+      <!-- Técnico Lisen -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/lisen.jpeg" alt="Lisen">
+          <div class="tecnico-info-overlay">
+            <h3>Lisen</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.0</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573027593737?text=👋%20Hola%2C%20Lisen!" target="_blank">Contactar</a>
           </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573154244242?text=👋%20Hola%2C%20Michael!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
         </div>
       </div>
 
-
-      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 2" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Jean Pierre</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.0</span>
+      <!-- Técnico Maicol -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/maicol.jpeg" alt="Maicol">
+          <div class="tecnico-info-overlay">
+            <h3>Maicol</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.0</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573154244242?text=👋%20Hola%2C%20Michael!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573112210988?text=👋%20Hola%2C%20Jean!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
         </div>
       </div>
 
-
-      <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 2" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Valentina</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.0</span>
+      <!-- Técnico Jean Pierre -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/jean.jpeg" alt="Jean Pierre">
+          <div class="tecnico-info-overlay">
+            <h3>Jean Pierre</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.0</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573112210988?text=👋%20Hola%2C%20Jean!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573163338345?text=👋%20Hola%2C%20Valentina!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
         </div>
       </div>
 
-
-
-       <div class="tecnico-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="tecnico-avatar"><img style="border-radius: 100%;" src="https://cdn-icons-png.flaticon.com/512/1085/1085421.png" alt="Tecnico 2" width="90px" height="90px"></div>
-        <div class="tecnico-info">
-          <h3>Prado</h3>
-          <div class="tecnico-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <span>4.0</span>
+      <!-- Técnica Valentina -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/valen.jpeg" alt="Valentina">
+          <div class="tecnico-info-overlay">
+            <h3>Valentina</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.0</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573163338345?text=👋%20Hola%2C%20Valentina!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
-          <ul class="tecnico-skills">
-            <li>Seguridad</li>
-            <li>Soporte Técnico</li>
-            <li>Mantenimiento</li>
-          </ul>
-          <a href="https://wa.me/573157675974?text=👋%20Hola%2C%20Prado!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." class="tecnico-contacto"><i class="fab fa-whatsapp"></i> Contactar</a>
         </div>
       </div>
-    </div>
-  </section>
+
+      <!-- Técnica Prado -->
+      <div class="swiper-slide">
+        <div class="tecnico-card">
+          <img src="./images/prado.jpeg" alt="Prado">
+          <div class="tecnico-info-overlay">
+            <h3>Prado</h3>
+            <p class="rating">⭐⭐⭐⭐✰ 4.0</p>
+            <ul class="skills">
+              <li>Seguridad</li>
+              <li>Soporte Técnico</li>
+              <li>Mantenimiento</li>
+            </ul>
+            <a href="https://wa.me/573157675974?text=👋%20Hola%2C%20Prado!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- swiper-wrapper -->
+  </div> <!-- swiper -->
+</section>
+
 
   <!-- Compra/Venta -->
   <section id="compra-venta" class="compra-venta">
@@ -340,8 +357,37 @@
         Nuestra misión es destacar en la ciudad Cali, ofreciendo tres servicios clave: mantenimiento integral de sistemas de cómputo (presencial, remoto o virtual), asistencia técnica eficiente y personalizada, y la reutilización de equipos tecnológicos para reducir residuos y facilitar acceso a tecnología asequible. Nos comprometemos con la calidad y las necesidades de nuestros clientes.
       </p>
     </div>
+    <div class="mision-img" style="display: flex; justify-content: center; align-items: center;">
+      <img data-aos="fade-up" data-aos-duration="1000" style="border-radius: 50px;" src="./images/team.jpeg" alt="" width="40%">
+    </div>
   </div>
 </section>
+
+
+
+<!-- Dona tu equipo -->
+<section id="reclutamiento" class="reclutamiento reclutamiento-impresionante donar-equipo">
+  <div id="particles-js" class="particles-background"></div>
+
+  <div class="reclutamiento-bg-anim"></div>
+
+  <div class="reclutamiento-textos" id="donar" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="reclutamiento-titulo">¿Tienes una computadora que ya no usas?</h2>
+    <h2 class="reclutamiento-titulo">DONA TU EQUIPO 👇</h2>
+
+    <p class="reclutamiento-subtitulo" id="donar-subs" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1200">
+      Dónala y dale una segunda vida. En <span class="syslity-gradient">Syslity</span>, reparamos y reutilizamos equipos para ayudar a quienes más lo necesitan. <br>
+      ¡Tu donación puede marcar la diferencia!
+    </p>
+
+    <a href="https://wa.me/573052387276?text=¡Hola%20🙋‍♂️%2C%20quiero%20donar%20mi%20computador%20💻%20a%20Syslity%20♻️!" target="_blank" class="btn-whatsapp-join animated-btn btn-donar" data-aos="zoom-in" data-aos-delay="500">
+      <i class="fab fa-whatsapp"></i> Donar mi equipo
+    </a>
+  </div>
+</section>
+
+
+
 
 
 
@@ -352,7 +398,7 @@
   <section id="reclutamiento" class="reclutamiento reclutamiento-impresionante">
     <div class="reclutamiento-bg-anim"></div>
     <div class="reclutamiento-content">
-      <div class="reclutamiento-logo-float">
+      <div class="reclutamiento-logo-float" data-aos="slide-in-left">
         <img src="images/logo.jpeg" alt="Syslity Logo" class="reclutamiento-logo-img logo-3d">
         <div class="reclutamiento-card-float card-f1 card-3d">
           <i class="fas fa-bolt animated-icon"></i>
@@ -367,7 +413,7 @@
           <span>Certificación</span>
         </div>
       </div>
-      <div class="reclutamiento-textos">
+      <div class="reclutamiento-textos" data-aos="slide-in-right">
         <h2 class="reclutamiento-titulo">¿Eres Técnico en Computadores?</h2>
         <p class="reclutamiento-subtitulo">
           Únete a <span class="syslity-gradient">Syslity</span> y recibe comisiones por cada servicio realizado.<br>
@@ -428,7 +474,7 @@
         <div class="footer-description">Mantenimiento, reparación y tecnología a tu alcance.</div>
         <div class="footer-social">
           <a href="#" class="social-link animated-icon"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="social-link animated-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/sysli.ty?igsh=YWc5emRjZWNsOTBn" class="social-link animated-icon"><i class="fab fa-instagram"></i></a>
           <a href="#" class="social-link animated-icon"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
@@ -492,5 +538,65 @@
 
 
   </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- tsParticles Init -->
+<script>
+  tsParticles.load("particles-js", {
+    background: { color: { value: "transparent" } },
+    fullScreen: { enable: false },
+    particles: {
+      number: { value: 50 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { quantity: 4 }
+      }
+    }
+  });
+</script>
+
+
+
+
+<script>
+  const swiper = new Swiper('.tecnicos-slider', {
+    loop: true,
+    spaceBetween: 24,
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.3,
+      },
+      1024: {
+        slidesPerView: 3.3,
+      }
+    }
+  });
+</script>
+
+
+
+
 </body>
 </html>

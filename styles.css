@@ -672,27 +672,35 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+
 .tecnico-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
   background: #23272f;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2.2rem 1.7rem 1.7rem 1.7rem;
+  padding: 2.2rem 1.7rem;
   min-width: 260px;
   max-width: 340px;
-  flex: 1 1 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1.1rem;
-  transition: transform 0.35s var(--transition), box-shadow 0.35s var(--transition);
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   border: 1.5px solid var(--secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
+
 .tecnico-card:hover {
-  transform: translateY(-12px) scale(1.04) rotateZ(1.5deg);
+  transform: scale(1.05);
+  z-index: 2;
   box-shadow: 0 12px 48px 0 #00b4d84a;
   border-color: var(--accent);
 }
@@ -778,6 +786,100 @@ body {
   background: var(--accent);
   color: var(--white);
 }
+
+
+
+
+
+.tecnicos-slider {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+.tecnico-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: filter 0.3s ease;
+}
+
+.tecnico-card:hover img {
+  filter: brightness(50%);
+}
+
+.tecnico-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.tecnico-info-overlay h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.tecnico-info-overlay .rating {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.skills li {
+  background: var(--accent);
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tecnico-info-overlay a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #0cc042;
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.tecnico-info-overlay a:hover {
+  background: var(--accent);
+}
+
+
+
 
 /* Compra/Venta */
 .compra-venta {
@@ -1553,6 +1655,125 @@ body {
 
 .mi-elemento-con-scroll::-webkit-scrollbar-thumb:hover {
   background: #495057;
+}
+
+
+#donar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#donar-subs {
+  font-size: 30px;
+  padding: 0 30px;
+}
+
+.donar-equipo {
+  padding: 2rem 2rem 8rem 2rem;
+}
+
+
+/* Transición y animación del botón */
+.btn-donar {
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-donar:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Transición de títulos y párrafo */
+.reclutamiento-titulo,
+.reclutamiento-subtitulo {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reclutamiento-subtitulo {
+    font-size: 1rem;
+  }
+
+  #donar-subs {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .btn-donar {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+
+
+
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.reclutamiento,
+.otra-seccion {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Asegura que el contenido esté por encima de las partículas */
+.reclutamiento-textos,
+.otros-elementos {
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+[data-aos="slide-in-left"] {
+  opacity: 0;
+  animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+[data-aos="slide-in-right"] {
+  opacity: 0;
+  animation: slideInFromRight 1.2s ease-out forwards;
 }
 
 
