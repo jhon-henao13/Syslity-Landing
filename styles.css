@@ -1896,6 +1896,7 @@ body {
 
   .contact-content {
     min-width: 50px;
+
   }
 
   .tecnico-contacto {
@@ -1954,6 +1955,19 @@ body {
 
   .hero-buttons {
     gap: 2rem;
+  }
+
+  .contact-content {
+    width: 90%;
+  }
+
+  .contact-form-wrapper {
+    width: 70%;
+    padding: 0;
+  }
+
+  .form-input {
+    width: 70%;
   }
 }
 
@@ -2022,6 +2036,10 @@ body {
   }
   .features, .tecnicos, .compra-venta, .reclutamiento, .contact {
     padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
   }
 }
 
