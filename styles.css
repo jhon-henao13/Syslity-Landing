@@ -394,6 +394,42 @@ body {
   opacity: 0.12;
   animation-delay: 4s;
 }
+
+.hero-shape.shape-1-donar {
+  width: 200px; height: 420px;
+  background: var(--secondary);
+  top: 220px; left: -120px;
+  animation-delay: 0s;
+}
+.hero-shape.shape-2-donar {
+  width: 200px; height: 320px;
+  background: var(--accent);
+  bottom: 200px; right: -80px;
+  animation-delay: 2s;
+}
+.hero-shape.shape-3-donar {
+  width: 50%;
+  height: 300px;
+  background: #3cc6e2;
+  top: 70%;
+  left: 25%;
+  opacity: 0.12;
+  animation-delay: 4s;
+}
+
+.hero-shape.shape-4-donar {
+  width: 50%;
+  height: 300px;
+  background: #3cc6e2;
+  top: -36%;
+  left: 25%;
+  opacity: 0.12;
+  animation-delay: 4s;
+}
+
+
+
+
 @keyframes heroShapeAnim {
   0% { transform: scale(1) translateY(0); }
   100% { transform: scale(1.15) translateY(-30px); }
@@ -1057,7 +1093,7 @@ body {
   animation-delay: 2.1s;
 }
 .reclutamiento-titulo {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--white);
   margin-bottom: 1rem;
@@ -1431,6 +1467,9 @@ body {
 .footer-main {
   flex: 1 1 340px;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-brand {
   display: flex;
@@ -1442,6 +1481,7 @@ body {
   color: #fff;
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 .footer-social {
   display: flex;
@@ -1666,13 +1706,40 @@ body {
   text-align: center;
 }
 
+.donar-titulo {
+  
+  font-size: 3.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f7f7f7, #d4d4d4, #eeeeee, #b0b0b0);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 6s ease-in-out infinite;
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+}
+
+@keyframes shimmerText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
 #donar-subs {
-  font-size: 30px;
-  padding: 0 30px;
+  font-size: 25px;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.donar-sub-1 {
+  font-size: 1.6rem;
 }
 
 .donar-equipo {
-  padding: 2rem 2rem 8rem 2rem;
+  padding: 4rem 2rem 15rem 2rem;
 }
 
 
@@ -1874,6 +1941,17 @@ body {
     height: 8px;
   }
 }
+
+@media (max-width: 995px) {
+  .donar-titulo {
+    font-size: 3rem;
+  }
+
+  #donar-subs {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 700px) {
   .features-grid, .tecnicos-grid, .compra-venta-grid {
     flex-direction: column;
@@ -1947,6 +2025,10 @@ body {
 @media (max-width: 620px) {
   .hero-title {
     font-size: 2.7rem;
+  }
+
+  .donar-titulo {
+    font-size: 2.5rem;
   }
 
   .animated-button {
