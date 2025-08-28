@@ -19,6 +19,7 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  
 
   <!-- tsParticles (Partículas de fondo) -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
@@ -47,7 +48,7 @@
         <a href="#servicios" class="nav-link"><i class="fas fa-tools nav-icon"></i> Servicios</a>
         <a href="#tecnicos" class="nav-link"><i class="fas fa-user-cog nav-icon"></i> Técnicos</a>
         <a href="#compra-venta" class="nav-link"><i class="fas fa-laptop nav-icon"></i> Compra/Venta</a>
-        <a href="#reclutamiento" class="nav-link"><i class="fas fa-briefcase nav-icon"></i> Reclutamiento</a>
+        <a href="#empleos" class="nav-link"><i class="fas fa-briefcase nav-icon"></i> Empleos</a>
         <a href="#contacto" class="nav-link"><i class="fas fa-envelope nav-icon"></i> Contacto</a>
       </nav>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
@@ -62,7 +63,7 @@
       <a href="#servicios" class="mobile-nav-link">Servicios</a>
       <a href="#tecnicos" class="mobile-nav-link">Técnicos</a>
       <a href="#compra-venta" class="mobile-nav-link">Compra/Venta</a>
-      <a href="#reclutamiento" class="mobile-nav-link">Reclutamiento</a>
+      <a href="#reclutamiento" class="mobile-nav-link">Empleos</a>
       <a href="#contacto" class="mobile-nav-link">Contacto</a>
       <button class="theme-toggle-mobile" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
     </nav>
@@ -79,12 +80,25 @@
       <div class="hero-shape shape-4-donar"></div>
     </div>
 
+  
+
+  <div class="top-spotlights">
+    <div class="spotlight left"></div>
+    <div class="spotlight right"></div>
+  </div>
+
   <div id="particles-js" class="particles-background"></div>
+
+
 
   <div class="reclutamiento-bg-anim"></div>
 
   <div class="reclutamiento-textos" id="donar" data-aos="fade-up" data-aos-duration="1000">
-    <h2 class="reclutamiento-titulo donar-titulo">¿Tienes Una Computadora <br> Qué Ya No Usas?</h2>
+    <h1 class="hero-metal-title">¿Tienes una Computadora <br><span>Que Ya No Usas?</span></h1>
+
+
+
+
     <h2 class="reclutamiento-titulo donar-sub-1">DONA TU EQUIPO 👇</h2>
 
     <p class="reclutamiento-subtitulo" id="donar-subs" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1200">
@@ -92,7 +106,7 @@
       ¡Tu donación puede marcar la diferencia!
     </p>
 
-    <a href="https://wa.me/573052387276?text=¡Hola%20🙋‍♂️%2C%20quiero%20donar%20mi%20computador%20💻%20a%20Syslity%20♻️!" target="_blank" class="btn-whatsapp-join animated-btn btn-donar" data-aos="zoom-in" data-aos-delay="500">
+    <a href="https://wa.me/573052387276?text=¡Hola%20🙋‍♂️%2C%20quiero%20donar%20mi%20computador%20💻%20a%20Syslity%20♻️!" target="_blank" class="btn-glow" data-aos="zoom-in" data-aos-delay="500">
       <i class="fab fa-whatsapp"></i> Donar mi equipo
     </a>
   </div>
@@ -217,7 +231,9 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Ladino', 'Seguridad, Soporte Técnico, Mantenimiento', './images/ladino.jpeg')">Información</button>
             <a href="https://wa.me/573015688088?text=👋%20Hola%2C%20Ladino!" target="_blank">Contactar</a>
+
           </div>
         </div>
       </div>
@@ -234,6 +250,7 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Lisen', 'Seguridad, Soporte Técnico, Mantenimiento', './images/lisen.jpeg')">Información</button>
             <a href="https://wa.me/573027593737?text=👋%20Hola%2C%20Lisen!" target="_blank">Contactar</a>
           </div>
         </div>
@@ -251,6 +268,7 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Maicol', 'Seguridad, Soporte Técnico, Mantenimiento', './images/maicol.jpeg')">Información</button>
             <a href="https://wa.me/573154244242?text=👋%20Hola%2C%20Michael!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
         </div>
@@ -268,6 +286,7 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Jean Pierre', 'Seguridad, Soporte Técnico, Mantenimiento', './images/jean.jpeg')">Información</button>
             <a href="https://wa.me/573112210988?text=👋%20Hola%2C%20Jean!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
         </div>
@@ -285,6 +304,7 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Valentina', 'Seguridad, Soporte Técnico, Mantenimiento', './images/valen.jpeg')">Información</button>
             <a href="https://wa.me/573163338345?text=👋%20Hola%2C%20Valentina!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
         </div>
@@ -302,6 +322,7 @@
               <li>Soporte Técnico</li>
               <li>Mantenimiento</li>
             </ul>
+            <button class="button-tecnicos" onclick="abrirModal('Prado', 'Seguridad, Soporte Técnico, Mantenimiento', './images/prado.jpeg')">Información</button>
             <a href="https://wa.me/573157675974?text=👋%20Hola%2C%20Prado!.%20Tengo%20una%20consulta%20y%20me%20gustaría%20recibir%20orientación." target="_blank">Contactar</a>
           </div>
         </div>
@@ -396,7 +417,7 @@
       </p>
     </div>
     <div class="mision-img" style="display: flex; justify-content: center; align-items: center;">
-      <img data-aos="fade-up" data-aos-duration="1000" style="border-radius: 50px;" src="./images/team.jpeg" alt="" width="40%">
+      <img class="mision-img" data-aos="fade-up" data-aos-duration="1000" style="border-radius: 50px;" src="./images/team.jpeg" alt="" width="40%">
     </div>
   </div>
 </section>
@@ -405,7 +426,7 @@
 
 
   <!-- Reclutamiento Mejorado -->
-  <section id="reclutamiento" class="reclutamiento reclutamiento-impresionante">
+  <section id="empleos" class="reclutamiento reclutamiento-impresionante">
     <div class="reclutamiento-bg-anim"></div>
     <div class="reclutamiento-content">
       <div class="reclutamiento-logo-float" data-aos="slide-in-left">
@@ -555,7 +576,7 @@
   </script>
 
   <!-- tsParticles Init -->
-<script>
+ <script>
   tsParticles.load("particles-js", {
     background: { color: { value: "transparent" } },
     fullScreen: { enable: false },
@@ -602,6 +623,62 @@
         slidesPerView: 3.3,
       }
     }
+  });
+</script>
+
+
+
+<!-- Modal Técnico -->
+<div id="modal-tecnico" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h2 id="modal-nombre">Nombre Técnico</h2>
+    <p id="modal-especialidad">Especialización: Soporte Técnico</p>
+    <div id="modal-fotos" class="modal-fotos">
+      <img src="./images/ladino.jpeg" alt="Foto técnico">
+    </div>
+    <p id="modal-aboutme" class="modal-aboutme">Descripción técnica: </p>
+    
+  </div>
+</div>
+
+<script>
+
+  const aboutMeText = {
+    "Ladino": "Enfocado en la seguridad digital y la optimización de sistemas. Me esfuerzo por brindar un servicio confiable y adaptado a cada usuario.",
+    "Lisen": "Me especializo en resolver fallos técnicos y asegurar que cada equipo funcione de manera óptima. Me gusta mantenerme actualizado en herramientas tecnológicas y seguridad digital.",
+    "Maicol": "Disfruto restaurar equipos y garantizar su buen rendimiento. Soy paciente, detallista y comprometido con cada reparación. Busco siempre la mejor solución para el cliente.",
+    "Jean Pierre": "Me encanta trabajar en entornos colaborativos resolviendo desafíos técnicos. Valoro la confianza de cada cliente y me enfoco en dejar los equipos como nuevos.",
+    "Valentina": "Soy organizada, proactiva y siempre dispuesta a aprender. Me interesa crear experiencias positivas para los usuarios al resolver sus problemas tecnológicos.",
+    "Prado": "Soy detallista y dedicada. Me gusta trabajar de forma metódica y asegurarme de que cada equipo reciba el cuidado que necesita. Mi meta es que cada cliente sienta confianza y satisfacción."
+  };
+
+
+    // Abre el modal con información dinámica
+  function abrirModal(nombre, especialidad, foto) {
+    document.getElementById("modal-nombre").textContent = nombre;
+    document.getElementById("modal-especialidad").textContent = "Especialización: " + especialidad;
+    document.getElementById("modal-fotos").innerHTML = `<img src="${foto}" alt="${nombre}">`;
+    document.getElementById("modal-aboutme").textContent = aboutMeText[nombre] || "";
+
+
+    const modal = document.getElementById("modal-tecnico");
+    modal.classList.remove("hidden");
+    setTimeout(() => modal.classList.add("show"), 10);
+  }
+
+  // Cierra el modal
+  function cerrarModal() {
+    const modal = document.getElementById("modal-tecnico");
+    modal.classList.remove("show");
+    setTimeout(() => modal.classList.add("hidden"), 400);
+  }
+
+  document.querySelector(".modal-close").addEventListener("click", cerrarModal);
+
+  // Cierra al hacer clic fuera del contenido
+  document.getElementById("modal-tecnico").addEventListener("click", (e) => {
+    if (e.target.id === "modal-tecnico") cerrarModal();
   });
 </script>
 

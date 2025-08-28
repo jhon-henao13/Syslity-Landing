@@ -159,6 +159,39 @@ function initializeAnimations() {
     });
   }
 
+
+ // Modal para tecnicos
+  // Abre el modal con información dinámica
+  function abrirModal(nombre, especialidad, foto) {
+    document.getElementById("modal-nombre").textContent = nombre;
+    document.getElementById("modal-especialidad").textContent = "Especialización: " + especialidad;
+    document.getElementById("modal-fotos").innerHTML = `<img src="${foto}" alt="${nombre}">`;
+
+    const modal = document.getElementById("modal-tecnico");
+    modal.classList.remove("hidden");
+    setTimeout(() => modal.classList.add("show"), 10);
+  }
+
+  // Cierra el modal
+  function cerrarModal() {
+    const modal = document.getElementById("modal-tecnico");
+    modal.classList.remove("show");
+    setTimeout(() => modal.classList.add("hidden"), 400);
+  }
+
+  document.querySelector(".modal-close").addEventListener("click", cerrarModal);
+
+  // Cierra al hacer clic fuera del contenido
+  document.getElementById("modal-tecnico").addEventListener("click", (e) => {
+    if (e.target.id === "modal-tecnico") cerrarModal();
+  });
+
+
+
+
+
+
+
   // Newsletter form feedback visual
   const newsletterForm = document.querySelector('.newsletter-form');
   if (newsletterForm) {
