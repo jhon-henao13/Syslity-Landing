@@ -632,6 +632,12 @@ body {
   color: var(--white);
   margin: 0.2rem 0 0.7rem 0;
 }
+
+#reclutamiento {
+  height: auto;
+}
+
+
 .section-subtitle {
   color: var(--gray-300);
   font-size: 1.1rem;
@@ -731,6 +737,7 @@ body {
   border: 1.5px solid var(--secondary);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 
@@ -831,13 +838,14 @@ body {
   padding-top: 2rem;
   padding-bottom: 4rem;
   width: 100%;
-  height: 60vh;
+  height: 80vh;
 }
 
 
 
 .swiper-wrapper {
   display: flex;
+  
 }
 
 .swiper-slide {
@@ -1105,8 +1113,17 @@ body {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  height: 50vh;
+  height: auto;
 }
+
+.reclutamiento-textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 .reclutamiento-bg-anim {
   position: absolute;
   inset: 0;
@@ -1405,7 +1422,7 @@ body {
   position: relative;
   overflow: hidden;
   perspective: 1000px;
-  padding: 4rem 2rem 6rem;
+  padding: 4rem 2rem 3rem;
 }
 
 
@@ -1673,6 +1690,7 @@ body {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 .newsletter-form {
   display: flex;
@@ -1729,7 +1747,7 @@ body {
   justify-content: space-between;
 }
 .footer-main {
-  flex: 1 1 340px;
+  flex: 1 1 140px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
@@ -2065,6 +2083,7 @@ body {
 .otra-seccion {
   position: relative;
   overflow: hidden;
+
 }
 
 /* Asegura que el contenido esté por encima de las partículas */
@@ -2132,6 +2151,11 @@ body {
   }
   .mobile-menu-btn {
     display: flex;
+  }
+
+  
+  .swiper-wrapper {
+    gap: 1.5rem;
   }
   
   .hero-title {
@@ -2243,6 +2267,10 @@ body {
   .contact-content {
     min-width: 50px;
 
+  }
+
+  .swiper-wrapper {
+    gap: 1.5rem;
   }
 
   .tecnico-contacto {
